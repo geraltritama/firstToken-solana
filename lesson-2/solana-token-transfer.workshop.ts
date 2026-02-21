@@ -102,6 +102,7 @@ async function main() {
   console.log('Wallet A:', walletA.publicKey.toBase58());
   console.log('Wallet B:', walletB.publicKey.toBase58());
 
+  // TODO: Kode untuk menangkap wallet yang sudah kita gunakan tadi dalam bentuk txt
   // fs.writeFile(
   //   "walletA-privateKey.txt",
   //   walletA.secretKey.toString(),
@@ -141,6 +142,7 @@ async function main() {
   //   walletB.publicKey, 1 * LAMPORTS_PER_SOL)
   // console.log('\nSaldo SOL:');
   // TODO: Panggil checkSolBalance() untuk walletA dan walletB
+  console.log('\nSaldo SOL: ')
   await checkSolBalance(walletA.publicKey, 'Wallet A');
   await checkSolBalance(walletB.publicKey, 'Wallet B');
 
@@ -157,6 +159,7 @@ async function main() {
   const mintAuthority = walletA.publicKey;
   const freezeAuthority = walletA.publicKey;
   const decimals = TOKEN_DECIMALS;
+  
   const mint = await createMint(
     connection,
     payer,
