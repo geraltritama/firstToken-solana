@@ -229,6 +229,8 @@ async function main() {
 
   console.log(`${TRANSFER_AMOUNT} token berhasil ditransfer!`);
   console.log('Saldo token setelah transfer:');
+  await checkTokenBalance(tokenAccountA.address);
+  await checkTokenBalance(tokenAccountB.address);
   // TODO: Panggil checkTokenBalance() untuk tokenAccountA dan tokenAccountB
 
   // ─────────────────────────────────────────────────────────────────────────
